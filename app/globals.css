@@ -1,44 +1,112 @@
-/* Navbar styles */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #0070f3;
+@font-face {
+  font-family: 'DelaGothicOne-Regular';
+  src: url("./fonts/DelaGothicOne-regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'Outfit';
+  src: url("./fonts/Outfit.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  25%, 75% {
+    transform: rotate(-15deg);
+  }
+}
+
+body {
+  font-family: 'Outfit', sans-serif; /* Example font, change to your preferred font */
+}
+
+p, span, li, a {
+  font-family: inherit; /* Inherit font from body for consistency */
+}
+
+button, .cta {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Apply shadow to all buttons and call-to-actions */
+  transition: box-shadow 0.3s ease;
+}
+
+button:hover, .cta:hover {
+
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 245, 226, 0.8);
+  color: black;
+  border-radius: 10px; /* Add border-radius to round the navbar */
+  margin: 1rem 2rem; /* Add margin to space the navbar from the edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a soft effect */
+}
+
+
+
 .navbar-brand .logo {
-  color: white;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
+  color: white;
   text-decoration: none;
 }
 
 .navbar-links {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
   list-style: none;
+  transition: box-shadow 0.3s ease;
 }
 
 .navbar-links a {
+  background: rgb(255, 67, 0);
+  justify-content: center;
+  font-size: 1.2rem;
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Apply shadow to all buttons and call-to-actions */
+
 }
 
 .navbar-links a:hover {
-  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.2);
 }
+
+.navbar-links a:active {
+  transform: translateY(2px);
+}
+
+
+
 
 /* Footer styles */
 .footer {
   text-align: center;
   padding: 2rem 0;
-  background-color: #f8f8f8;
+  background-color: rgba(255, 235, 235, 0.6);
+  border-radius: 10px;
 }
 
 .footer a {
-  color: #0070f3;
+  color: rgba(243, 174, 0, 0.76);
   text-decoration: none;
 }
 
@@ -48,4 +116,210 @@
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+
+/* General Container */
+.container {
+  padding: 0 2rem;
+}
+
+
+
+/* Hero Section */
+.hero {
+  margin: 6rem auto;
+  padding: 8rem 0;
+  border-radius: 20px; /* Make the box more rounded */
+  background: linear-gradient(135deg, rgba(255, 233, 99, 0.6), rgba(255, 128, 0, 0.6)); /* Simple gradient */
+  backdrop-filter: blur(15px); /* Glassy blur effect */
+  color: black;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+
+.hero h1 {
+  font-family: 'DelaGothicOne-Regular', serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#emoji-header span {
+  display: inline-block;
+  animation: wave 2s ease-in-out infinite;
+}
+
+
+.hero h2 {
+  font-family: 'DelaGothicOne-Regular', serif;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.hero p {
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+}
+
+.cta {
+  background-color: #ff5722;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.cta:hover {
+  background-color: #e64a19;
+}
+
+
+
+/* Projects Section */
+.projects-section {
+  padding: 4rem 0;
+}
+
+.projects-section h2 {
+  font-family: 'DelaGothicOne-Regular', serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.projects {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 45%;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+  margin-bottom: 2rem; /* Add space between cards */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card h3 {
+  font-family: 'DelaGothicOne-Regular', serif;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project-card p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.project-card .cta {
+  margin-top: 1rem;
+  background-color: #e64a19;
+}
+
+.project-card .cta:hover {
+  background-color: #e64a19;
+}
+
+/* Projects Page Styles */
+.projects-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* about page */
+
+.about-container {
+  width: 80%;
+  margin: 4rem auto;
+  padding: 4rem 2rem;
+  border-radius: 20px; /* Rounded corners */
+  background-color: rgba(255, 245, 226, 0.8); /* Light background for the box */
+  backdrop-filter: blur(10px); /* Subtle blur effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Depth effect */
+  text-align: center;
+}
+
+.about-container h1 {
+  font-family: 'DelaGothicOne-Regular', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-container p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* contact page */
+
+.contact-container {
+  width: 80%;
+  margin: 4rem auto;
+  padding: 4rem 2rem;
+  border-radius: 20px; /* Rounded corners */
+  background-color: rgba(255, 245, 226, 0.8); /* Light background for the box */
+  backdrop-filter: blur(10px); /* Subtle blur effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Depth effect */
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-family: 'DelaGothicOne-Regular', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-container p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: #ff5722;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.contact-form button:hover {
+  background-color: #e64a19;
 }
