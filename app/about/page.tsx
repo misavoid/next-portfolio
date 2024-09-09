@@ -12,6 +12,18 @@ export default function About() {
                     Whether it's building dashboards, solving complex problems,
                     or working on personal projects like <strong>Momentta</strong>,
                     I'm always eager to dive deep into technology.
+                    <p> One of my first big projects involved building SQL queries for a web crawler that sifted
+                        through over 600,000 webpages, gathering news on topics like customer experience, fiber optic
+                        expansion and the telecommunications market in Germany.</p>
+                    <p> The project that really fired it off was a sentiment analysis on newspaper articles about
+                        fiber optic expansion in Germany. It was my first time working
+                        with machine learning, and it was a huge learning experience.</p>
+                    <p>
+                        Next to all that, I’ve worked on projects I’m super proud of, like Momentta,
+                        a time-tracking software that helps me keep track of tasks when I’m bouncing
+                        between them. I also created a DHL label converter because, let’s be honest,
+                        who wants an A4-sized label when you can extract only the important stuff and
+                        print it neatly on a 62mm label?</p>
 
                 </p>
                 <p>
