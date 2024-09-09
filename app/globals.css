@@ -121,6 +121,7 @@ button:hover, .cta:hover {
 
 /* Hero Section */
 .hero {
+  width: 60%;
   margin: 6rem auto;
   padding: 8rem 0;
   border-radius: 20px; /* Make the box more rounded */
@@ -128,7 +129,7 @@ button:hover, .cta:hover {
   backdrop-filter: blur(15px); /* Glassy blur effect */
   color: black;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 
@@ -173,7 +174,9 @@ button:hover, .cta:hover {
 
 /* Projects Section */
 .projects-section {
-  padding: 4rem 0;
+  position: relative;
+  width: 100%;
+  padding: 8rem 0;
 }
 
 .projects-section h2 {
