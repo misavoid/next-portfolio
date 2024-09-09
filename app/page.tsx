@@ -18,6 +18,7 @@ export default function Home() {
                 <a href="/projects" className="cta">View Projects</a>
             </section>
 
+
             {/* About Me Section */}
             <section className="about" id="about">
                 <h2>About Me</h2>
