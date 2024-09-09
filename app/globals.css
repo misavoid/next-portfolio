@@ -31,7 +31,6 @@ button, .cta {
 }
 
 button:hover, .cta:hover {
-
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
 }
 
@@ -123,7 +122,6 @@ button:hover, .cta:hover {
 .hero {
   width: 60%;
   margin: 6rem auto;
-  padding: 8rem 0;
   border-radius: 20px; /* Make the box more rounded */
   background: linear-gradient(135deg, rgba(255, 233, 99, 0.6), rgba(255, 128, 0, 0.6)); /* Simple gradient */
   backdrop-filter: blur(15px); /* Glassy blur effect */
@@ -137,6 +135,10 @@ button:hover, .cta:hover {
   font-family: 'Outfit', serif;
   font-size: 3rem;
   font-weight: bold;
+}
+
+.hero-content {
+  padding: 2rem;
 }
 
 #emoji-header span {
@@ -157,6 +159,10 @@ button:hover, .cta:hover {
 }
 
 .cta {
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
   background-color: #ff5722;
   color: white;
   padding: 0.8rem 1.5rem;
@@ -194,8 +200,8 @@ button:hover, .cta:hover {
 }
 
 .project-card {
-  width: 100%;
-  max-width: 45%;
+  justify-content: center;
+  width: 50%;
   background-color: #f5f5f5;
   border-radius: 10px;
   padding: 1.5rem;
@@ -221,13 +227,26 @@ button:hover, .cta:hover {
 }
 
 .project-card .cta {
-  margin-top: 1rem;
+  margin-top: auto;
+  display: inline-block;
   background-color: #e64a19;
+
 }
 
 .project-card .cta:hover {
   background-color: #e64a19;
 }
+
+.project-card .more-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.project-card.expanded .more-info {
+  max-height: 500px; /* Adjust this based on the content size */
+}
+
 
 /* Projects Page Styles */
 .projects-container {
