@@ -1,11 +1,4 @@
 @font-face {
-  font-family: 'DelaGothicOne-Regular';
-  src: url("./fonts/DelaGothicOne-regular.ttf") format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Outfit';
   src: url("./fonts/Outfit.ttf") format('truetype');
   font-weight: normal;
